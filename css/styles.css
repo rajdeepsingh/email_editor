@@ -1,0 +1,218 @@
+body {
+	position: relative;
+}
+
+.form-container {
+    font-family: Roboto, Helvetica, sans-serif;
+    padding-top: 40px;
+}
+
+.main-grid {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.preview {
+	flex-basis: 50%;
+	height: 100vh;
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+.preview .preview-header {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.main-column {
+    overflow-y: scroll;
+    flex-basis: 47%;
+    height: 100vh;
+}
+
+.main-column {
+	box-shadow: 0px 0px 8px #999;
+	padding-left: 40px;
+	padding-top: 40px;
+	padding-right: 20px;
+}
+
+.preview-heading h3.mobile {
+	display: none;
+}
+
+.preview-heading h3.desktop {
+	display: block;
+}
+
+@media screen and (max-width: 1700px) {
+
+	.main-grid {
+		flex-direction: column;
+	}
+	.preview {
+		flex-basis: 80%;
+		height: auto;
+		overflow: auto !important;
+	}
+
+	.main-column {
+		flex-basis: 80%;
+		margin-bottom: 20px;
+		height: auto;
+		overflow: auto !important;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#preview {
+		display: none;
+	}
+
+	.preview-heading h3.mobile {
+		display: block;
+	}
+
+	.preview-heading h3.desktop {
+		display: none;
+	}
+	.preview-header {
+		flex-direction: column;
+    	align-items: flex-start;
+	}
+
+	.preview-heading {
+		max-width: initial;
+		margin-bottom: 20px;
+	}
+
+	.preview {
+		overflow: visible !important;
+	}
+}
+
+.intro {
+	margin: 0;
+	color: #666;
+}
+
+#info-form {
+	padding: 20px;
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+#output {
+	margin-top: 50px;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+#results {
+	height: initial;
+}
+
+.heading-two {
+	margin-top: 40px;
+	color: #de3527;
+}
+
+.heading-three {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+
+.field-label {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.preview {
+	padding: 30px;
+	background: #333333;
+}
+
+.preview .preview-buttons {
+	text-align: right;
+	padding: 0;
+}
+
+.preview .preview-heading {
+	padding: 0;
+}
+
+.preview h3 {
+	text-align: left;
+	font-size: 24px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0;
+	padding-top: 15px;
+}
+
+/* Custom Themes */
+
+.toggle-field {
+	font-size: 24px;
+	font-weight: 100;
+
+}
+
+#custom-themes {
+	margin-top: 20px;
+}
+
+/* Choose Templates*/
+
+.preview .chooseTemplates {
+	max-width: 100%;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.preview .chooseTemplates label {
+	font-size: 20px;
+	color: #FFF;
+	display: inline-block;
+	font-weight: 100;
+	margin-top: 10px;
+	float: left;
+}
+
+.preview .chooseTemplates .field {
+	width: 100%;
+}
+
+
+h1, .h1 {
+    font-size: 24px;
+    line-height: 40px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.preview .chooseTemplates select {
+	float: left;
+	margin-left: 20px;
+	max-width: 300px;
+	font-size: 20px;
+}
+
+#importFiles {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#fileLabel {
+	margin-right: 20px;
+	padding-top: 5px;
+}

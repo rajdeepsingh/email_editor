@@ -1,0 +1,15 @@
+font-color
+main-border-size
+main-bg
+main-border-color
+logo-urls
+heading-color
+cta-bg
+button-color
+border-radius
+button-bg-color
+footer-color
+footer-bg
+footer-button-color
+footer-button-border
+footer-button-bg-color

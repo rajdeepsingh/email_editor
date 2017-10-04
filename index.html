@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bold Recurring Orders Email Editor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://static.boldcommerce.com/bevy/v1/bevy.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="masthead">
+            <nav class="app-nav">
+                <a href="http://boldcommerce.com" class="masthead-logo" target="_self" title="Dashboard">
+                    <img src="img/logo.svg" alt="Bold Logo" >
+                </a>
+                <div class="primary-nav">
+                    <ul class="nav nav-bar">
+                        <li class="nav-item nav-item-active">
+                            <a href="#" class="nav-link">Email Editor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="form-container">
+            <div class="main-grid">
+                <div class="main-column">
+                    <h1>Bold Commerce Email Editor for Recurring Orders</h1>
+                    <p class="intro">This is a basic email editor for the default email templates for Recurring Orders</p>
+                    <form action="" id="info-form">
+                        <h2 class="heading-two">Quick Themes</h2>
+                        <div class="grid" id="custom-themes">
+
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="defaultTheme" name="custom-themes" checked>
+                              <div class="toggle-field-radio"></div>
+                              Default Theme
+                            </label>
+                          </div>
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="darkTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Dark Night
+                            </label>
+                          </div>
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="moonTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Moon Light
+                            </label>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="grid">
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="summerTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Summer Breeze
+                            </label>
+                          </div>
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="boldTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Bold Theme
+                            </label>
+                          </div>
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="blueTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              I Heart Blue
+                            </label>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="grid">
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="googleTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Forest Survival
+                            </label>
+                          </div>
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="amberTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Amber Autumn
+                            </label>
+                          </div>
+                          <div class="column third">
+                            <label class="toggle-field">
+                              <input type="radio" value="pinkTheme" name="custom-themes">
+                              <div class="toggle-field-radio"></div>
+                              Simply Pink
+                            </label>
+                          </div>
+                        </div>
+
+                        <h2 class="heading-two">Import your own theme</h2>
+                        
+                            <label id="fileLabel" for="importFiles">Click Import and choose the file that you previously downloaded</label>
+                            <input accept=".json" type="file" id="importFiles" class="file" value="Import a previous Theme">
+                            
+                            <label id="importButton" class="btn" for="importFiles">Choose File</label>
+                            <button id="import" class="btn">Apply</button>
+
+                        <h2 class="heading-two">Header Section</h2>
+
+                        <div class="url field">for
+                            <label for="logo-urls" class="field-label">Enter the URL for your logo</label>
+                            <div class="field-group">
+                              <input type="url" name="" id="logo-urls" class="input-field" value="http://placehold.it/200X200" placeholder="http://placehold.it/200X200" />
+                            </div>
+                            <p class="field-description">Please make sure to only use Absolute URLs (For Example: http://placehold.it/200X199)</p>
+                        </div><!-- url -->
+                        <div class="grid">
+                            <div class="field column half">
+                              <label for="heading-color" class="field-label">Text Color of the Headings</label>
+                              <input type="text" name="" id="heading-color" class="input-field jscolor {hash:true}" value="#101010" placeholder="Default: #101010" />
+
+                            </div><!-- heading-color -->
+                            <div class="field column half">
+                              <label for="main-bg" class="field-label">Background Color</label>
+                              <input type="text" name="" id="main-bg" class="input-field jscolor {hash:true}" value="#FFFFFF" placeholder="Default: #FFFFFF" />
+
+                            </div><!-- main-bg -->
+                        </div>
+                        <div class="grid">
+                            <div class="field column half">
+                                <label for="main-border-color" class="field-label">Border Color</label>
+                                <input type="text" name="" id="main-border-color" class="input-field jscolor {hash:true}" value="#999999" placeholder="Default: #999999" />
+
+                            </div><!-- main-border-color -->
+                            <div class="field column half">
+                                <label for="main-border-size" class="field-label">Size of the border</label>
+                                <div class="field-group">
+                                    <input type="text" name="main-border-size" id="main-border-size" class="number input-field" value="20" placeholder="Default: 20px" minLength="1" maxLength="2" />
+                                    <span class="field-group-addon">px</span>
+                                </div>
+                                <p class="field-description">Numbers only (in px)</p>
+                            </div><!-- main-border-size -->
+                        </div>
+                        <!-- Common Settings -->
+                        <h2 class="heading-two">Main Section</h2>
+                        <div class="grid">
+                            <div class="field column half">
+                                <label for="font-color" class="fie" d-label">Text Color</label>
+                                <input type="text" name="" id="font-color" class="input-field jscolor {hash:true}" value="#101010" placeholder="Default: #101010" />
+
+                            </div><!-- font-color -->
+                            <div class="field column half">
+                                <label for="cta-bg" class="field-label">Background Color</label>
+                                <input type="text" name="" id="cta-bg" class="input-field jscolor {hash:true}" value="#F2F2F2" placeholder="Default: #F2F2F2" />
+
+                            </div><!-- cta-bg -->
+                        </div>
+                        <h3 class="heading-three">Buttons</h3>
+                        <div class="grid">
+                            <div class="field column half">
+                                <label for="button-color" class="field-label">Button Text Color</label>
+                                <input type="text" name="" id="button-color" class="input-field jscolor {hash:true}" value="#FFFFFF" placeholder="Default: #FFFFFF" />
+
+                            </div><!-- button-color -->
+                            <div class="field column half">
+                                <label for="button-bg-color" class="field-label">Button Background Color</label>
+                                <input type="text" name="" id="button-bg-color" class="input-field jscolor {hash:true}" value="#999" /" placeholder="Default: #999" />
+
+                            </div><!-- button-bg-color -->
+                        </div>
+                        <div class="field">
+                            <label for="border-radius" class="field-label">Rounded Borders (Type in 0 for squared corners)</label>
+                            <div class="field-group">
+                                <input type="text" minlength="1" maxlength="2" name="border-radius" id="border-radius" class="number input-field" value="25" placeholder="Default: 25px"/>
+                                <span class="field-group-addon">px</span>
+                            </div>
+                            <p class="field-description">Numbers only (in px)</p>
+                        </div><!-- border-radius -->
+                        <!-- Main Section -->
+
+                        <h2 class="heading-two">Footer Section</h2>
+                        <div class="grid">
+                          <div class="field column half">
+                            <label for="footer-color" class="field-label">Text Color</label>
+                            <input type="text" name="" id="footer-color" class="input-field jscolor {hash:true}" value="#575757" placeholder="Default: #575757" />
+                          </div><!-- footer-color -->
+                          <div class="field column half">
+                              <label for="footer-bg" class="field-label">Background Color</label>
+                              <input type="text" name="" id="footer-bg" class="input-field jscolor {hash:true}" value="#F2F2F2" placeholder="Default: #F2F2F2" />
+
+                          </div><!-- footer-bg -->
+                        </div>
+                        <h3 class="heading-three">Buttons</h3>
+                        <div class="grid">
+                            <div class="field column half">
+                                <label for="footer-button-color" class="field-label">Button Text Color</label>
+                                <input type="text" name="" id="footer-button-color" class="input-field jscolor {hash:true}" value="#555" placeholder="Default: #555" />
+
+                            </div><!-- footer-button-color -->
+                            <div class="field column half">
+                                <label for="footer-button-bg-color" class="field-label">Button Background Color</label>
+                                <input type="text" name="" id="footer-button-bg-color" class="input-field jscolor {hash:true}" value="#FAFAFA" placeholder="Default: #FAFAFA" />
+
+                            </div><!-- footer-button-bg-color -->
+                        </div>
+                        <div class="grid">
+                          <div class="field column half">
+                              <label for="footer-button-border" class="field-label">Button Border Color</label>
+                              <input type="text" name="" id="footer-button-border" class="input-field jscolor {hash:true}" value="#999999" placeholder="Default: #999999" />
+                          </div><!-- footer-button-border -->
+
+                          <div class="field column half">
+                              <label for="footer-border-color" class="field-label">Footer Divider Color</label>
+                              <input type="text" name="" id="footer-border-color" class="input-field jscolor {hash:true}" value="#DDDDDD" placeholder="Default: #DDDDDD" />
+                          </div>
+                            <!-- Footer Section -->
+                        </div>
+                    </form><!-- End of the Form -->
+                </div><!-- grid column 1 -->
+                <!-- Output -->
+                <div class="preview">
+
+                    <div class="chooseTemplates grid">
+                      <div class="field">
+                        <label for="emailTemplates" class="field-label">You are currently viewing</label>
+                        <select name="" id="emailTemplates" class="select-field">
+                            <option value="subscriptionUpdate">Subscription update to (to Customer)</option>
+                            <option value="upcomingShipment">Upcoming shipment (to Customer)</option>
+                            <option value="priceChange">Price Change (to Customer)</option>
+                            <option value="productChange">Product Change (to Customer)</option>
+                            <option value="productRemove">Product Remove (to Customer)</option>
+                            <option value="addToExistingSubscription">Item added to existing subscription</option>
+                            <option value="cancel">Delete subscription</option>
+                            <option value="refund">Refund Notification</option>
+                            <option value="manageSubscription" selected="selected">Manage Subscription Order</option>
+                            <option value="limitedSubscriptionExpiry">Limited Subscription Expiry (to Customer)</option>
+                            <option value="prepaidSubscriptionExpiry">Prepaid Subscription Expiry (to Customer)</option>
+                            <option value="upcomingCCExpiry">Upcoming Credit Card Expiry (to Customer)</option>
+                            <option value="buildABoxUpcomingShipment">Build a Box Upcoming Shipment (to Customer)</option>
+                            <option value="deniedCreditCard">Credit Card Denied (to Customer)</option>
+                            <option value="shippingAddressDenied">Shipping Address Denied (to Customer)</option>
+                            <option value="insufficientInventory">Insufficient Inventory Denied (to Customer)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="grid preview-header">
+                        <div class="column third preview-heading">
+                            <h3 class="heading-three desktop">Preview</h3>
+                            <h3 class="heading-three mobile">Preview not available on Mobile</h3>
+                        </div>
+                        <div class="column two-thirds preview-buttons">
+                                
+                            <a class="btn btn-primary btn-large" download="theme.json" id="saveTheme" href="#">Download Theme</a>
+
+                        
+                            <button class="btn btn-primary open-modal btn-large" data-modal="#complex-modal" id="get-results">Get Code
+                            </button>
+                                
+                        </div>
+                    </div>
+
+                    <div id="preview">
+
+                    </div>
+                </div><!-- grid column 2 -->
+            </div><!-- grid -->
+
+            <div class="modal" id="complex-modal">
+              <div class="modal-window modal-medium">
+                <div class="modal-header">
+                  <h2 class="modal-title">Copy and Paste this code into the email editor</h2>
+                  <button class="btn btn-close close-modal" data-modal="#complex-modal">
+                    <svg class="boldicon"><use xlink:href="#boldicon-times" /></svg>
+                  </button>
+                </div>
+                <div class="modal-content">
+                  <h2>Go to the RO App and then Settings > Emails</h2>
+                  <textarea name="" id="results" cols="200" rows="20" class="input-field"></textarea>
+                </div>
+                <div class="modal-actions">
+                  <button class="btn left" id="copy-text" data-modal="#complex-modal">Copy To Clipboard</button>
+                </div>
+              </div>
+            </div><!-- #complex-modal -->
+        </div><!-- container -->
+
+
+
+ <svg class="boldicon-sprite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+      <!-- Times -->
+      <symbol id="boldicon-times" viewBox="0 0 160 160">
+        <polygon points="133 13.001 80.072 65.929 27.143 13.001 13 27.144 65.929 80.072 13 133.001 27.143 147.143 80.072 94.214 133 147.143 147.143 133.001 94.214 80.072 147.143 27.144"/>
+      </symbol>
+
+</svg>
+
+
+
+
+
+
+        <script src="js/handlebars-v4.0.5.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="js/jscolor.min.js"></script>
+        <script src="js/modal.prototype.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
